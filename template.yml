@@ -46,7 +46,7 @@ Resources:
     Type: AWS::ElasticBeanstalk::ApplicationVersion
     Properties:
       ApplicationName: !Ref 'EBApplication'
-      Description: 1.0.0
+      Description: 1.0.1
       SourceBundle: '.'
   EBConfigurationTemplate:
     Description: The AWS Elastic Beanstalk configuration template to be created for this project, which defines configuration settings used to deploy different versions of an application.
