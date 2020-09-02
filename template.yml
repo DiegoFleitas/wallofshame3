@@ -51,14 +51,14 @@ Parameters:
     Description: The size of the database (GiB)
     Default: '5'
   DBUsername:
-    Type: SecureString
+    Type: String
     Description: Username for MySQL database access
     ConstraintDescription: must begin with a letter and contain only alphanumeric characters.
     NoEcho: 'true'
     Default: 'dummyuser'
   DBPassword:
     Description: Password MySQL database access
-    Type: SecureString
+    Type: String
     ConstraintDescription: must contain only alphanumeric characters.
     NoEcho: 'true'
     Default: 'dummypassword'
