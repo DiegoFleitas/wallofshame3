@@ -54,10 +54,14 @@ Parameters:
     Type: String
     Description: Username for MySQL database access
     ConstraintDescription: must begin with a letter and contain only alphanumeric characters.
+    NoEcho: 'true'
+    Default: 'dummyuser'
   DBPassword:
     Description: Password MySQL database access
     Type: String
     ConstraintDescription: must contain only alphanumeric characters.
+    NoEcho: 'true'
+    Default: 'dummypassword'
 Resources:
   EBApplication:
     Description: The AWS Elastic Beanstalk application, which is a container used to deploy the correct application configuration.
