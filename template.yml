@@ -45,7 +45,7 @@ Parameters:
   DBInstanceClass:
     Type: String
     Description: DB instance class
-    Default: 'db.t2.small'
+    Default: 'db.t2.micro'
   DBAllocatedStorage:
     Type: Number
     Description: The size of the database (GiB)
@@ -121,3 +121,14 @@ Resources:
           OptionName: Subnets
           Value: !Ref 'SubnetId'
         - !Ref "AWS::NoValue"
+  EBDatabase:
+    Description: The database the application uses, which is an Amazon RDS DB instance launched for this project.
+    Type: AWS::RDS::DBInstance
+    Properties:
+      DBInstanceIdentifier: !Ref 'DBInstanceID'
+      DBName: !Ref 'DBName'
+      DBInstanceClass: !Ref 'DBInstanceClass'
+      AllocatedStorage: !Ref 'DBAllocatedStorage'
+      Engine: MySQL
+      MasterUsername: !Ref 'DBUsername'
+      MasterUserPassword: !Ref 'DBPassword'
